@@ -1,9 +1,12 @@
 import pandas as pd
-import numpy as np
 
-data = pd.read_csv('data/descompress/resident-population/ethnical.csv',sep='|',  index_col=0)
 
-df = data['year']
-#df = data[(data['year'] >= 2000) & (data['year'] <= 2015)]
-#df_save = df.to_csv('processed/ethnical_2000_2015.csv', sep = '|', index=False)
-print(df.head(10))
+data = pd.read_csv('data/descompress/resident-population/ethnical.csv', names=['year', 'ethnic', 'olds', 'value'] , delimiter ='|' , header = 1)
+
+df = [data['year'].astype(int)>2000]
+
+print(df.head())
+#('data/renamed_data/2000_years.csv', sep = '\t' , index = False, na_rep ='N/A')
+
+
+
