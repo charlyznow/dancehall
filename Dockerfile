@@ -7,3 +7,5 @@ COPY . /app/
 EXPOSE 5000
 
 CMD bash -c "while true; do sleep 1; done"
+
+
